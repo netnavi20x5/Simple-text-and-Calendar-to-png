@@ -6,8 +6,8 @@ A collection of lightweight Python utilities designed to generate pixel-perfect,
 
 ```text
 receipt-utils/
-├── receipt_gen.py     # Program 1: Standard text & checklist formatter
-├── calendar_gen.py    # Program 2: Monthly grid calendar generator
+├── text2png.py     # Program 1: Standard text & checklist formatter
+├── calendar2png.py    # Program 2: Monthly grid calendar generator
 └── README.md          # Project documentation
 
 ```
@@ -38,21 +38,21 @@ pip install Pillow
 
 ## 🛠️ Usage Guide
 
-### 1. Text & Checklist Generator (`receipt_gen.py`)
+### 1. Text & Checklist Generator (`text2png.py`)
 
 Converts standard text files into receipt images. Features automatic text wrapping, custom alignment, and a dynamic checklist mode with hanging indents.
 
 * **Standard centered text:**
 
 ```bash
-  python receipt_gen.py -i shopping_list.txt -o receipt.png --align center
+  python text2png.py -i shopping_list.txt -o receipt.png --align center
 
 ```
 
 * **Checklist with checkboxes and custom margins:**
 
 ```bash
-  python receipt_gen.py -i todo.txt -o checklist.png --checklist --margin 15
+  python text2png.py -i todo.txt -o checklist.png --checklist --margin 15
 
 ```
 
@@ -62,7 +62,7 @@ Generates a 5cm structured monthly calendar grid. Automatically defaults to the 
 
 * **Quick current month calendar:**
 ```bash
-python calendar_gen.py -o current_month.png
+python calendar2png.py -o current_month.png
 
 ```
 
@@ -70,7 +70,7 @@ python calendar_gen.py -o current_month.png
 * **Specific month with highlighted dates (e.g., May 2026):**
 
 ```bash
-  python calendar_gen.py -o marked_may.png -y 2026 -m 5 -i holidays.txt --greyscale 40
+  python calendar2png.py -o marked_may.png -y 2026 -m 5 -i holidays.txt --greyscale 40
 
 ```
 
